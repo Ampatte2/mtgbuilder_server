@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9bf50251.chunk.css",
+    "main.js": "/static/js/main.95a64dfd.chunk.js",
+    "main.js.map": "/static/js/main.95a64dfd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.76333534.js",
+    "runtime-main.js.map": "/static/js/runtime-main.76333534.js.map",
+    "static/js/2.f91ed9e5.chunk.js": "/static/js/2.f91ed9e5.chunk.js",
+    "static/js/2.f91ed9e5.chunk.js.map": "/static/js/2.f91ed9e5.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d7610806441024b7d69717210b7a9a21.js": "/precache-manifest.d7610806441024b7d69717210b7a9a21.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.9bf50251.chunk.css.map": "/static/css/main.9bf50251.chunk.css.map",
+    "static/js/2.f91ed9e5.chunk.js.LICENSE.txt": "/static/js/2.f91ed9e5.chunk.js.LICENSE.txt",
+    "static/media/Banner.jpg": "/static/media/Banner.1abe3296.jpg",
+    "static/media/Erasure.jpg": "/static/media/Erasure.9f3c168d.jpg",
+    "static/media/MagicCardBack.jpg": "/static/media/MagicCardBack.2ca7bd5a.jpg",
+    "static/media/cardBack.png": "/static/media/cardBack.bae871f6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76333534.js",
+    "static/js/2.f91ed9e5.chunk.js",
+    "static/css/main.9bf50251.chunk.css",
+    "static/js/main.95a64dfd.chunk.js"
+  ]
+}
