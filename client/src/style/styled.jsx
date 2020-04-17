@@ -81,6 +81,9 @@ const SearchFormInput = styled.input`
     @media ${device.laptop}{
         font-size:1vh;
         width:12vw;
+        &:focus{
+            font-size:16px;
+        }
     }
     @media ${device.mobileL}{
         font-size:1vh;
@@ -139,6 +142,9 @@ const SearchFormInputCheckboxDiv = styled.div`
     @media ${device.mobileL}{
         font-size:1vh;
         width:70vw;
+        &:focus{
+            font-size:16px;
+        }
     }
 `
 const Icon = styled.svg`
@@ -342,7 +348,7 @@ const DropInput = styled.input`
             font-size:1.5vh;
             width:15vw;
         }
-        @media ${device.laptop}{
+        @media ${device.mobileL}{
             font-size:1.25vh;
             
         }
@@ -353,7 +359,9 @@ const DropInput = styled.input`
         width:20vw;
     }
     @media ${device.mobileL}{
-        
+        &:focus{
+            font-size:16px;
+        }
         
         width:25vw;
     }
@@ -518,6 +526,7 @@ const AccountInput = styled.input`
     font-size:2vh;
     &:focus{
         background-color:white;
+        font-size:16px;
     }
     &::placeholder{
         font-size:2vh;
