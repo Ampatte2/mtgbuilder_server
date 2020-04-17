@@ -13,7 +13,6 @@ class Navbar extends Component {
         if(!this.props.auth && token){
             this.props.user(token)
         }else{
-            
             this.props.getData();
         }
 

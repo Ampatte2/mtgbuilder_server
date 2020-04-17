@@ -160,7 +160,7 @@ export function getData(){
     return function(dispatch){
         dispatch(isLoaded(false))
         return getDefault().then((res)=>{
-
+            
             let allDecks=[];
             
             res.data.map(item=>{

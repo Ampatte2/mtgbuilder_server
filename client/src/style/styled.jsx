@@ -298,13 +298,14 @@ const DeckSelectItem = styled.div`
     height:${props=>props.height/2};
     display:${props=>props.height==="15vh" ? true : "none"};
     cursor:pointer;
+    overflow:hidden;
     &:hover{
         color:#34E4EA
     }
 
     @media ${device.laptop}{
         
-        font-size:1.5vh;
+        font-size:16px;
     }
     
 `
@@ -776,18 +777,20 @@ const CardEmpty = styled.div`
 
 const Deck = styled.div`
     width:12vw;
-    margin:0vh 2vw 0vh 2vw;
+    margin:0vh 2vw 5vh 2vw;
     font-size:1.5vh;
     height:55vh;
     text-align:center;
     background-color:transparent;
     border:none;
+    display:flex;
+    flex-direction:column;
     @media ${device.laptop}{
         height:30vh;
         width:30vw;
     }
     @media ${device.mobileL}{
-        height:40vh;
+        height:45vh;
         width:50vw;
     }
     
@@ -796,6 +799,7 @@ const Deck = styled.div`
 
 const DeckImage = styled.img`
     width:15vw;
+    
     border-radius:10px;
     margin-bottom:1vh;
     margin-top:2vh;
@@ -813,6 +817,7 @@ const DeckImage = styled.img`
     @media ${device.mobileL}{
         margin-top:1vh;
         margin-left:1vw;
+        height:35vh;
         width:50vw;
     }
     
@@ -862,6 +867,7 @@ const DeckDisplay = styled.div`
     width:84vw;
     flex-wrap:wrap;
     
+    
     margin-top:2vh;
     @media ${device.laptop}{
         width:69vw;
@@ -879,8 +885,11 @@ const ConfirmDelete = styled.button`
     border-radius:4px;
     cursor:pointer;
     font-size:1.5vh;
+    width:10vw;
+    margin-left:2.5vw;
     @media ${device.laptop}{
         font-size:1vh;
+        margin-left: 0;
     }
 `
 
