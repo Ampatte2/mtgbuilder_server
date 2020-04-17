@@ -72,9 +72,10 @@ const SearchFormInput = styled.input`
     border:none;
     padding:5px;
     margin:5px;
-    font-size:2vh;
+    font-size:16px;
     border: solid 1px #E7E7E7;
     border-radius: 2px;
+    overflow:hidden;
     &:focus{
         background-color:#34E4EA;
     }
@@ -84,7 +85,7 @@ const SearchFormInput = styled.input`
         
     }
     @media ${device.mobileL}{
-        font-size:1vh;
+        font-size:16px;
         width:17vw;
     }
     
@@ -118,7 +119,7 @@ const CheckBoxLabel = styled.div`
     margin-right:10px;
     font-size:2vh;
     @media ${device.laptop}{
-        font-size:1.5vh;
+        font-size:16px;
     }
     
 `
@@ -139,7 +140,7 @@ const SearchFormInputCheckboxDiv = styled.div`
     }
     @media ${device.mobileL}{
         font-size:1vh;
-        width:70vw;
+        width:90vw;
         
     }
 `
@@ -161,6 +162,9 @@ const SearchFormLabel = styled.label`
     @media ${device.laptop}{
         font-size:1.5vh;
     }
+    @media ${device.mobileL}{
+        height:16px;
+    }
 `
 
 const SearchFormButton = styled.button`
@@ -176,7 +180,7 @@ const SearchFormButton = styled.button`
         color:black;
     }
     @media ${device.laptop}{
-        font-size:1.25vh;
+        font-size:1.5vh;
         padding:5px;
     }
 `
@@ -355,7 +359,7 @@ const DropInput = styled.input`
         width:20vw;
     }
     @media ${device.mobileL}{
-        
+        font-size:16px;
         
         width:25vw;
     }
@@ -524,6 +528,9 @@ const AccountInput = styled.input`
     &::placeholder{
         font-size:2vh;
         text-align:center;
+    }
+    @media ${device.mobileL}{
+        height:16px;
     }
 `
 const AccountButton = styled.button`
@@ -779,7 +786,7 @@ const Deck = styled.div`
         width:30vw;
     }
     @media ${device.mobileL}{
-        height:30vh;
+        height:40vh;
         width:50vw;
     }
     
@@ -804,7 +811,8 @@ const DeckImage = styled.img`
     }
     @media ${device.mobileL}{
         margin-top:1vh;
-        width:30vw;
+        margin-left:1vw;
+        width:50vw;
     }
     
 `

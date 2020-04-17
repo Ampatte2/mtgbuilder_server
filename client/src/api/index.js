@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-   baseURL: "https://mtg-builder-app.herokuapp.com/api"
+   baseURL: "http://localhost:4000/api"
 })
 
 //https://mtg-builder-app.herokuapp.com/api http://localhost:4000/api
