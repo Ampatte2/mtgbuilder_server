@@ -1,8 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-   baseURL: "https://mtg-builder-app.herokuapp.com/api"
+   baseURL: "http://localhost:4000/api"
 })
+
+//https://mtg-builder-app.herokuapp.com/api
 
 export const fetchCard = payload => api.post("/getCard", payload).then((response)=>{console.log("Server Response", response); return response}).catch((error)=>console.log(error))
 

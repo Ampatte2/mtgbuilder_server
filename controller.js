@@ -158,6 +158,7 @@ getCard = async(req,res) =>{
 }
 
 getData = async(req,res) =>{
+    console.log("getdata")
     await new Promise((resolve, reject)=>{
         connection.query("SELECT * FROM decklists;", function(err, response){
             //parse JSON to make a new decklist object to send to client
