@@ -8,6 +8,7 @@ import ModalLogin from "./modalLogin";
 import DeckDisplay from "./deckDisplay";
 import ModalDeck from "./modalDeck";
 import CheckBox from "./checkBox";
+import ConfirmDelete from "./confirmDelete"
 
 export {Navbar,
         Modal, 
@@ -18,4 +19,5 @@ export {Navbar,
         ModalLogin, 
         DeckDisplay, 
         ModalDeck,
-        CheckBox}
+        CheckBox,
+        ConfirmDelete}

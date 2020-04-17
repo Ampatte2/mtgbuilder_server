@@ -72,8 +72,8 @@ class Decklist extends Component {
                 
                 return <Styled.DecklistItem>
                             <Styled.DecklistItemHeader key={index}>{item.name}</Styled.DecklistItemHeader>
-                            <div style={{marginRight:"1vw"}}>
-                            {item.quantity}
+                            <div style={{marginRight:"1vw", display:"flex"}}>
+                            <div style={{fontSize:"2vh"}}>{item.quantity}</div>
                             <Styled.UserButtons onClick={()=>this.handleClick(item, index, 1)}>+</Styled.UserButtons>
                             <Styled.UserButtons onClick={()=>this.handleClick(item, index, -1)}>-</Styled.UserButtons>
                             </div>

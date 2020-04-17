@@ -11,5 +11,6 @@ router.post("/getUser", controller.getUser);
 router.post("/saveCard", controller.saveCard);
 router.post("/getData", controller.getData);
 router.post("/deleteCard", controller.deleteCard);
+router.post("/deleteDeck", controller.deleteDeck);
 
 module.exports = router

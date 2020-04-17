@@ -1,6 +1,7 @@
 import React from 'react'
 import {Modal} from "./index"
 import Styled from "../style/styled"
+import {ConfirmDelete} from "./index"
 
 
 export default function CardDisplay(props) {
@@ -17,7 +18,9 @@ export default function CardDisplay(props) {
                         }
 
                         if(props.deleteCard){
-                            deleteButton = <Styled.CardButton onClick={()=>props.deleteCard(item)}>Delete Card From Library</Styled.CardButton>
+                            deleteButton = <ConfirmDelete delete={props.deleteCard} theItem={item}></ConfirmDelete>
+                            //<Styled.CardButton onClick={()=>props.deleteCard(item)}>Delete Card From Library</Styled.CardButton>
+                            
                         }
 
                         if(item["name"]==="No Cards Found"){

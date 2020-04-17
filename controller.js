@@ -158,7 +158,7 @@ getCard = async(req,res) =>{
 }
 
 getData = async(req,res) =>{
-    console.log("getdata")
+    
     await new Promise((resolve, reject)=>{
         connection.query("SELECT * FROM decklists;", function(err, response){
             //parse JSON to make a new decklist object to send to client
@@ -225,6 +225,15 @@ deleteCard = async(req,res)=>{
     })
 }
 
+deleteDeck = async(req,res)=>{
+    
+    const id = jwt.verify(req.body.token, publicKey).id;
+    const name = req.body.deckname
+    connection.query("DELETE FROM decklists WHERE id="+SqlString.escape(id)+" AND deckname="+SqlString.escape(name)+" ;", function(err, response){
+        res.send("Deleted");
+    })
+}
+
 saveDeck = async(req,res)=>{
     //needs error handling for verify
     const id = jwt.verify(req.body.token, publicKey).id;
@@ -257,6 +266,7 @@ module.exports = {
     saveDeck,
     saveCard,
     getData,
-    deleteCard
+    deleteCard,
+    deleteDeck
     
 }

@@ -12,6 +12,7 @@ export const loadState =()=>{
                 decklists:[]}
         }
         //return the saved state
+        
         return JSON.parse(serializedState);
     }catch(err){
         return undefined
@@ -20,7 +21,9 @@ export const loadState =()=>{
 export const saveState = (state) =>{
     try{
         //set state to string
+        
         const serializedState = JSON.stringify(state);
+        
         //set local storage to stringified state
         localStorage.setItem("state", serializedState);
     }catch(err){

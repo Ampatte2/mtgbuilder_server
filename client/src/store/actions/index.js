@@ -1,6 +1,6 @@
-import {fetchCard, getLogin, getDeckList, saveToList, getDefault, getRegister, getUser, saveCard, deleteCard} from "../../api"
+import {fetchCard, getLogin, getDeckList, saveToList, getDefault, getRegister, getUser, saveCard, deleteCard, deleteDeck} from "../../api"
 import Erasure from "../../images/Erasure.jpg"
-import { getDefaultFlags } from "mysql2/lib/connection_config"
+
 
 export const GET_CARD = "GET_CARD"
 export const DISPLAY_CARD = "DISPLAY_CARD"
@@ -18,6 +18,7 @@ export const DB_DECK = "DB_DECK"
 export const LOAD_DECK = "LOAD_DECK"
 export const LOGOUT = "LOGOUT"
 export const DB_CARD ="DB_CARD"
+export const DELETE_DECK = "DELETE_DECK"
 
 
 export function addCard(card){
@@ -94,6 +95,17 @@ export function deleteMyCard(card){
     }
 }
 
+export function deleteMyDeck(deck){
+    const payload = {deckname: deck.name, token:localStorage.getItem("token")};
+    return function(dispatch){
+        dispatch(isLoaded(false));
+        return deleteDeck(payload).then(res=>{
+            dispatch(user(payload.token));
+            dispatch(isLoaded(true));
+        })
+    }
+}
+
 export function login(value){
     return function(dispatch){
         dispatch(isLoaded(false))
@@ -120,7 +132,6 @@ export function user(token){
             let decks=[];
             let allDecks=[];
             let myCards=[]
-
             res.data[0].map(item=>{
                 decks.push(JSON.parse(item.decklist))
             })
@@ -141,6 +152,7 @@ export function user(token){
             dispatch(isLoaded(true))
 
         })
+        
     }
 }
 
@@ -180,13 +192,6 @@ export function register(value){
             dispatch(isLoaded(true))
         }) 
         
-    }
-}
-
-export function add(card){
-    return function(dispatch){
-        
-        return //api call here
     }
 }
 

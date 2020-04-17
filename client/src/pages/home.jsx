@@ -4,7 +4,7 @@ import {getCard, saveMyCard} from "../store/actions";
 import {connect} from "react-redux";
 import React, { Component } from 'react'
 import Loader from "react-loader";
-import {Decklist, CardDisplay, CheckBox} from "../components";
+import {CardDisplay, CheckBox} from "../components";
 import Styled from "../style/styled";
 
 
@@ -26,8 +26,6 @@ class home extends Component {
     }
     handleChangeSelect(color){
         
-        
-        console.log(this.state.colors)
         if(this.state.colors.includes(color)){
             let index = this.state.colors.indexOf(color)
             let newState = this.state.colors;

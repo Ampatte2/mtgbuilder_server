@@ -75,6 +75,7 @@ const SearchFormInput = styled.input`
     font-size:16px;
     border: solid 1px #E7E7E7;
     border-radius: 2px;
+    width:10vw;
     overflow:hidden;
     &:focus{
         background-color:#34E4EA;
@@ -870,6 +871,19 @@ const DeckDisplay = styled.div`
     }
 `
 
+const ConfirmDelete = styled.button`
+    border:none;
+    background-color:${props=>props.colorBackground};
+    padding:5px;
+    color:${props=>props.color};
+    border-radius:4px;
+    cursor:pointer;
+    font-size:1.5vh;
+    @media ${device.laptop}{
+        font-size:1vh;
+    }
+`
+
 //
 
 
@@ -928,7 +942,8 @@ const Styled = {
     AccountHeaderMain,
     AccountHeader,
     DropInput,
-    DropButton
+    DropButton,
+    ConfirmDelete
 }
 
 export default Styled
