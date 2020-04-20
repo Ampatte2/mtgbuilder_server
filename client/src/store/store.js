@@ -6,7 +6,8 @@ import {loadState} from "./localStorage"
 
 const persistedState = loadState()
 
-const store = createStore(main, persistedState, applyMiddleware(thunk, logger
+const store = createStore(main, persistedState, applyMiddleware(thunk
+    //logger
     ))
 
 export default store
