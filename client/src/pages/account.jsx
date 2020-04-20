@@ -11,7 +11,7 @@ class account extends Component {
     render() {
         
         return (
-            <div>
+            <div style={{textAlign:"center"}}>
                 {!this.props.auth && <Redirect to="/"/>}
                 
                 
@@ -19,7 +19,7 @@ class account extends Component {
                 <CardDisplay cardList={this.props.myCards} view={"No Saved Cards"} deleteCard={this.props.deleteMyCard}></CardDisplay>
                 <Styled.AccountHeader>Decks</Styled.AccountHeader>
                 <DeckDisplay decks={this.props.myDecks} view={"myDecks"} deleteDeck={this.props.deleteMyDeck}></DeckDisplay>
-                {this.props.myDecks.length===0 && <h3>No Saved Decks</h3>}
+                
                 
             </div>
         )

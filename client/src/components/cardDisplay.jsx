@@ -9,8 +9,9 @@ export default function CardDisplay(props) {
     const dis = props.cardList
     
     return (
+        <>
         <Styled.CardDisplay>
-            {Object.keys(dis).length> 0 ? Object.values(dis).map((item, index)=>{
+            {Object.keys(dis).length> 0 && Object.values(dis).map((item, index)=>{
                         let typeDescription, addButton, deleteButton;
 
                         if(props.isAuth){
@@ -18,7 +19,7 @@ export default function CardDisplay(props) {
                         }
 
                         if(props.deleteCard){
-                            deleteButton = <ConfirmDelete delete={props.deleteCard} theItem={item}></ConfirmDelete>
+                            deleteButton = <ConfirmDelete delete={props.deleteCard} theItem={item} ></ConfirmDelete>
                             //<Styled.CardButton onClick={()=>props.deleteCard(item)}>Delete Card From Library</Styled.CardButton>
                             
                         }
@@ -84,7 +85,9 @@ export default function CardDisplay(props) {
                         }
                     }
         
-            ): <Styled.CardEmpty>{props.view}</Styled.CardEmpty>}
+            )}
         </Styled.CardDisplay>
+        {Object.keys(dis).length=== 0 && <Styled.CardEmpty>{props.view}</Styled.CardEmpty>}
+        </>
     )
 }

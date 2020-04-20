@@ -746,22 +746,20 @@ const CardHeader = styled.div`
 const CardHeader2 = styled.div`
     font-size:2vh;
     text-shadow: 0.25px 0.25px;
-    margin-top:3vh;
+    margin-top:1vh;
     @media ${device.laptop}{
         margin-top:1vh;
-        font-size:1.5vh;
+        font-size:1.0vh;
     }
     @media ${device.mobileL}{
-        font-size:1.25vh;
+        font-size:1.25vh
         
     }
     
 `
 const CardEmpty = styled.div`
     font-size:5vh;
-    margin:auto;
-    margin-top:10vh;
-    margin-left:30vw;
+    
     @media ${device.laptop}{
         margin-top:3vh;
         font-size:3vh;
@@ -776,7 +774,7 @@ const CardEmpty = styled.div`
 //deck
 
 const Deck = styled.div`
-    width:12vw;
+    width:15vw;
     margin:0vh 2vw 5vh 2vw;
     font-size:1.5vh;
     height:55vh;
@@ -799,7 +797,7 @@ const Deck = styled.div`
 
 const DeckImage = styled.img`
     width:15vw;
-    
+    text-align:center;
     border-radius:10px;
     margin-bottom:1vh;
     margin-top:2vh;
@@ -877,6 +875,7 @@ const DeckDisplay = styled.div`
     }
 `
 
+
 const ConfirmDelete = styled.button`
     border:none;
     background-color:${props=>props.colorBackground};
@@ -885,15 +884,16 @@ const ConfirmDelete = styled.button`
     border-radius:4px;
     cursor:pointer;
     font-size:1.5vh;
-    width:10vw;
-    margin-left:2.5vw;
+    
+    
     @media ${device.laptop}{
         font-size:1vh;
-        margin-left: 0;
+        
     }
 `
 
-//
+//border:none;
+
 
 
 

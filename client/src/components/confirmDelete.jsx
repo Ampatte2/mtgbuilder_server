@@ -39,15 +39,19 @@ export default class ConfirmDelete extends Component {
 
     handleClick(){
         
-        this.setState({color:"black", colorBackground:"red", confirm:true})
+        this.setState({color:"black", colorBackground:"#FFCC00", confirm:true})
+        console.log(this.state, this.props.theItem)
         
     }
     handleDelete(){
+        this.setState({color:"white", colorBackground:"#2B4141", confirm:false})
         this.props.delete(this.props.theItem);
+        
     }
     render() {
+        
         return (
-           
+            
             <div ref={this.setWrapperRef}>
             <Styled.ConfirmDelete color={this.state.color} colorBackground={this.state.colorBackground} onClick={()=>this.handleClick()}>
                 Delete
