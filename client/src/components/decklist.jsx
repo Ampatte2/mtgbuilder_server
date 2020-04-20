@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Styled from "../style/styled"
 import {connect} from "react-redux";
-import {addCard, modifyDeck} from "../store/actions"
+import {addCard, modifyDeck, clearDeck} from "../store/actions"
 import {DropDown} from "./index"
 
 class Decklist extends Component {
@@ -11,6 +11,7 @@ class Decklist extends Component {
         this.handleDragEnter= this.handleDragEnter.bind(this);
         this.handleDragLeave = this.handleDragLeave.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.handleClear = this.handleClear.bind(this);
         
     }
 
@@ -54,6 +55,10 @@ class Decklist extends Component {
             this.props.modifyDeck(modifier, index)
         }
     }
+    handleClear = () => {
+        console.log("clear")
+        this.props.clearDeck();
+    }
     
     render() {
         
@@ -77,10 +82,13 @@ class Decklist extends Component {
                             <Styled.UserButtons onClick={()=>this.handleClick(item, index, 1)}>+</Styled.UserButtons>
                             <Styled.UserButtons onClick={()=>this.handleClick(item, index, -1)}>-</Styled.UserButtons>
                             </div>
+                            
                         </Styled.DecklistItem>
             })}
+            
             </div>        
             </Styled.Decklist>
+            <Styled.DeckListClear onClick={()=>this.handleClear()}>Clear</Styled.DeckListClear>
             </Styled.DecklistDiv>
         )
     }
@@ -94,7 +102,8 @@ const mapStateToProps = (state) =>{
 const mapDispatchToProps = (dispatch)=>{
     return{
         modifyDeck: (modifier, index)=>{dispatch(modifyDeck(modifier, index))},
-        addCard: (card)=>{dispatch(addCard(card))}
+        addCard: (card)=>{dispatch(addCard(card))},
+        clearDeck: ()=>{dispatch(clearDeck())}
     }
 }
 

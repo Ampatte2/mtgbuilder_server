@@ -19,6 +19,7 @@ export const LOAD_DECK = "LOAD_DECK"
 export const LOGOUT = "LOGOUT"
 export const DB_CARD ="DB_CARD"
 export const DELETE_DECK = "DELETE_DECK"
+export const CLEAR_DECK = "CLEAR_DECK"
 
 
 export function addCard(card){
@@ -64,6 +65,9 @@ export function dbCard(cards){
 
 export function loadDeck(deck){
     return {type:LOAD_DECK, deck}
+}
+export function clearDeck(){
+    return {type:CLEAR_DECK}
 }
 
 export function saveMyCard(card){

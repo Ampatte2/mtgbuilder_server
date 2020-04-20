@@ -1,5 +1,5 @@
 
-import {GET_CARD, DISPLAY_CARD, IS_LOADED, LOAD_DECK, ADD_CARD, MY_CARD, AUTH, MODIFY_DECK, ADD_DECK, DB_CARD, DB_DECK, LOGOUT, ERROR} from "../actions"
+import {GET_CARD, DISPLAY_CARD, IS_LOADED, LOAD_DECK, ADD_CARD, MY_CARD, AUTH, MODIFY_DECK, ADD_DECK, DB_CARD, DB_DECK, LOGOUT, ERROR, CLEAR_DECK} from "../actions"
 
 const initialState = {isLoaded:true,
                         error:false,
@@ -37,6 +37,8 @@ const mtgbuilder = (state=initialState, action)=>{
                     }
                 }), id:state.currentDeck.id}
             })
+        case CLEAR_DECK:
+            return Object.assign({}, state, {currentDeck: {name:"Please Select A Deck", decklist:[], id:undefined}})
         case DB_DECK:
             return Object.assign({}, state, {decklists: [...action.decks]})
         case MY_CARD:

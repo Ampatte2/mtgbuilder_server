@@ -68,7 +68,7 @@ class home extends Component {
     render() {
         
         return (
-        <div>
+        <div style={{textAlign:"center"}}>
             <Styled.SearchForm name="search-form"  onSubmit={e=>this.handleSubmit(e)}>
                 <Styled.SearchFormLabel htmlFor="name">Name</Styled.SearchFormLabel>
                 <Styled.SearchFormInput name="name" type="text" onChange={e=>this.handleChange(e)}></Styled.SearchFormInput>

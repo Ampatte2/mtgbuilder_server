@@ -874,7 +874,31 @@ const DeckDisplay = styled.div`
         width:54vw;
     }
 `
-
+const DeckListClear = styled.button`
+    border:none;
+    background-color:#2B4141;
+    font-size:2vh;
+    height:3.5vh;
+    
+    
+    margin-top:1vh;
+    color:white;
+    border-radius:4px;
+    cursor:pointer;
+    &:hover{
+        background-color:#34E4EA;
+        color:black;
+    }
+    @media ${device.laptop}{
+        font-size:1.5vh;
+        width:8vw;
+    }
+    @media ${device.mobileL}{
+        
+        
+        width:12vw;
+    }
+`
 
 const ConfirmDelete = styled.button`
     border:none;
@@ -909,6 +933,7 @@ const Styled = {
     DeckDisplay,
     DecklistItemHeader,
     DeckSelectItem,
+    DeckListClear,
     SelectError,
     CloneModal,
     CloneModalHeader,
